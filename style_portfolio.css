@@ -94,7 +94,12 @@ body {
 }
 
 .image-with-caption {
+    max-width: 100%;
     text-align: center;
+}
+
+.image-with-caption p{
+    font-size: 14px;
 }
 
 .image-with-caption img {
@@ -135,4 +140,15 @@ body {
 
 .image-with-caption {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center align images and captions on smaller screens */
+    }
+
+    .image-with-caption {
+        margin-bottom: 20px; /* Add some space between each image and caption */
+    }
 }
