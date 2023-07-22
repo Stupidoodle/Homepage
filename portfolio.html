@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style_portfolio.css">
+    <script src="script_portfolio.js"></script>
+    <!-- Add this link to include the Showdown library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+</head>
+
+<body>
+    <div class="image-container">
+        <div class="image-with-caption">
+            <img src="https://i.ibb.co/Gnm3sNw/DALL-E-2023-07-22-20-48-37-Create-a-project-profile-photo-for-this-project-a-customer-service-chat-b.png"
+                alt="Peltgan: An AI Model that can 100% replace any call center worker."
+                onclick="showText(this, 'https://raw.githubusercontent.com/Stupidoodle/f-ck-service/main/README.md')">
+            <p>f-ck-service</p>
+        </div>
+        <div class="image-with-caption">
+            <img src="https://i.ibb.co/njHvC0j/DALL-E-2023-07-22-20-53-51-Without-the-text.png" alt="I need money"
+                style="--f:.12;--r:5px"
+                onclick="showText(this, 'https://raw.githubusercontent.com/Stupidoodle/tinder-bot/main/README.md')">
+            <p>tinder-bot</p>
+        </div>
+        <div class="image-with-caption">
+            <img src="https://i.ibb.co/G51mQJK/DALL-E-2023-07-22-20-55-55-Create-a-abstract-and-simple-logo-where-the-main-element-is-centered-for.png"
+                alt="Minecraft Server project fullstack thing idk" style="--f:.08;--r:20px"
+                onclick="showText(this, 'https://raw.githubusercontent.com/Stupidoodle/minecraft-ubuntu/main/README.md')">
+            <p>minecraft-ubuntu</p>
+        </div>
+    </div>
+
+    <div id="modalContainer">
+        <div id="modalContent">
+            <!-- Content of the modal will be dynamically filled here -->
+        </div>
+    </div>
+</body>
+
+</html>
