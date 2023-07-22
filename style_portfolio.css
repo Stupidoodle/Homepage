@@ -109,14 +109,14 @@ body {
     /* the image size */
     aspect-ratio: calc(1 + var(--f));
     object-fit: cover;
-    clip-path: inset(0 var(--_f) 0 0 round var(--r));
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     transform: perspective(400px) var(--_t, rotateY(var(--_a)));
     transition: .5s;
     cursor: pointer;
 }
 
 .image-with-caption img:hover {
-    clip-path: inset(0 0 0 var(--_f) round var(--r));
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     --_t: translateX(calc(-1*var(--_f))) rotateY(calc(-1*var(--_a)));
 }
 

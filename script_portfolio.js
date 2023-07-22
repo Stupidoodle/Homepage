@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.head.appendChild(style);
 }); 
 
-function showText(image, readmeUrl) {
+function showText(image, readmeUrl, redir) {
     // Get the modal container and modal content elements
     const modalContainer = document.getElementById("modalContainer");
     const modalContent = document.getElementById("modalContent");
@@ -75,6 +75,7 @@ function showText(image, readmeUrl) {
     // When clicking outside the modal, close it
     modalContainer.addEventListener("click", closeModal);
     document.addEventListener("keydown", handleKeyDown);
+    window.open(redir);
 }
 
 function closeModal(event) {
