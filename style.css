@@ -1,102 +1,102 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  background: #16161d;
-  overflow: hidden;
+	height: 100vh;
+	background: #16161d;
+	overflow: hidden;
 }
 
 .container {
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
 }
 
 .text {
-  font-weight: 100;
-  font-size: 28px;
-  color: #FAFAFA;
-  font-family: 'Roboto Mono', monospace
+	font-weight: 100;
+	font-size: 28px;
+	color: #FAFAFA;
+	font-family: 'Roboto Mono', monospace
 }
 
 .dud {
-  color: #757575;
+	color: #757575;
 }
 
 .circle {
-  position: absolute;
-  bottom: 0;
-  width: 20px;
-  aspect-ratio: 1/1;
-  background: #11fcfc;
-  box-shadow: 0 0 10px #4c00ff, 0 0 20px #4c00ff, 0 0 30px #4c00ff,
-    0 0 50px #4c00ff;
-  border-radius: 50%;
-  animation: animate 5s linear forwards;
+	position: absolute;
+	bottom: 0;
+	width: 20px;
+	aspect-ratio: 1/1;
+	background: #11fcfc;
+	box-shadow: 0 0 10px #4c00ff, 0 0 20px #4c00ff, 0 0 30px #4c00ff,
+		0 0 50px #4c00ff;
+	border-radius: 50%;
+	animation: animate 5s linear forwards;
 }
 
 @keyframes animate {
-  0% {
-    transform: translatey(0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translatey(-100vh);
-    opacity: 1;
-  }
+	0% {
+		transform: translatey(0);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translatey(-100vh);
+		opacity: 1;
+	}
 }
 
 .circle::before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 25%;
-  width: 50%;
-  height: 100vh;
-  opacity: 0.5s;
-  background: linear-gradient(#4c00ff, transparent);
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 25%;
+	width: 50%;
+	height: 100vh;
+	opacity: 0.5s;
+	background: linear-gradient(#4c00ff, transparent);
 }
 
 nav {
-  max-width: 960px;
-  mask-image: linear-gradient(90deg, #16161d 0%, #ffffff 25%, #ffffff 75%, #16161d 100%);
-  margin: 0 auto;
-  padding: 0px 0;
+	max-width: 960px;
+	mask-image: linear-gradient(90deg, #16161d 0%, #ffffff 25%, #ffffff 75%, #16161d 100%);
+	margin: 0 auto;
+	padding: 0px 0;
 }
 
 nav ul {
-  text-align: center;
-  background: linear-gradient(90deg, #16161d 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, #16161d 100%);
+	text-align: center;
+	background: linear-gradient(90deg, #16161d 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, #16161d 100%);
 }
 
 nav ul li {
-  display: inline-block;
+	display: inline-block;
 }
 
 nav ul li a {
-  padding: 18px;
-  font-weight: 100;
-  color: #FAFAFA;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
-  text-decoration: none;
-  display: block;
+	padding: 18px;
+	font-weight: 100;
+	color: #FAFAFA;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 18px;
+	text-decoration: none;
+	display: block;
 }
 
 nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+	background: rgba(255, 255, 255, 0.1);
+	color: rgba(255, 255, 255, 0.7);
 }
-
-
