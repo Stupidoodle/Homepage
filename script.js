@@ -81,6 +81,7 @@ async function fetchData(url) {
     }
 }
 
+//
 
 document.addEventListener("DOMContentLoaded", async () => {
     const currentSongDiv = document.getElementById('currentSong');
