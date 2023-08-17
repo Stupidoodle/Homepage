@@ -2,10 +2,10 @@ const serverIP = '3.65.42.173'; // Replace with your server's IP address
 const apiKey = "b68913fa-2aec-4c26-896f-8ba7caa8978e"; // Assuming you have the API key stored as a GitHub secret
 
 const apiEndpoints = {
-    currentSong: `http://${serverIP}:8000/api/current-song?api=apiKey`,
-    topArtists: `http://${serverIP}:8000/api/top-artists?api=apiKey`,
-    topTracks: `http://${serverIP}:8000/api/top-tracks?api=apiKey`,
-    recentlyPlayed: `http://${serverIP}:8000/api/recently-played?api=apiKey`
+    currentSong: `http://${serverIP}:8000/api/current-song?api_key${apiKey}`,
+    topArtists: `http://${serverIP}:8000/api/top-artists?api_key${apiKey}`,
+    topTracks: `http://${serverIP}:8000/api/top-tracks?api_key${apiKey}`,
+    recentlyPlayed: `http://${serverIP}:8000/api/recently-played?api_key${apiKey}`
 };
 
 // TextScramble class for the text effect
@@ -63,11 +63,30 @@ class TextScramble {
     }
 }
 
+async function fetchData(url) {
+    try {
+        const response = await fetch(url, {
+            headers: {
+                'Authorization': `Bearer ${apiKey}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        return response.json();
+    } catch (error) {
+        throw new Error(`Error fetching data: ${error.message}`);
+    }
+}
+
+
 document.addEventListener("DOMContentLoaded", async () => {
     const currentSongDiv = document.getElementById('currentSong');
     const topArtistsDiv = document.getElementById('topArtists');
     const topTracksDiv = document.getElementById('topTracks');
-    const recentlyPlayedDiv = document.getElementById('recentlyPlayed');
+    const recentlyPlayedDi = document.getElementById('recentlyPlayed');
 
     // TextScramble initialization
     const el = document.querySelector('.text');
