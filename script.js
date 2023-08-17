@@ -2,10 +2,10 @@ const serverIP = '3.65.42.173'; // Replace with your server's IP address
 const apiKey = "b68913fa-2aec-4c26-896f-8ba7caa8978e"; // Assuming you have the API key stored as a GitHub secret
 
 const apiEndpoints = {
-    currentSong: `http://${serverIP}:8000/api/current-song?api_key=${apiKey}`,
-    topArtists: `http://${serverIP}:8000/api/top-artists?api_key=${apiKey}`,
-    topTracks: `http://${serverIP}:8000/api/top-tracks?api_key=${apiKey}`,
-    recentlyPlayed: `http://${serverIP}:8000/api/recently-played?api_key=${apiKey}`
+    currentSong: `https://${serverIP}:8000/api/current-song?api_key=${apiKey}`,
+    topArtists: `https://${serverIP}:8000/api/top-artists?api_key=${apiKey}`,
+    topTracks: `https://${serverIP}:8000/api/top-tracks?api_key=${apiKey}`,
+    recentlyPlayed: `https://${serverIP}:8000/api/recently-played?api_key=${apiKey}`
 };
 
 // TextScramble class for the text effect
